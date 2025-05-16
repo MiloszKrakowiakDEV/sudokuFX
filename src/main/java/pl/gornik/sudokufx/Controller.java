@@ -6,8 +6,11 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.TextAlignment;
 
 import java.util.*;
@@ -24,6 +27,8 @@ public class Controller {
     private int[][] userNumbersArr = new int[9][9];
 
     private int chosenNumber;
+
+    private String chosenColor="#FFF";
 
     public void initialize(){
         generateNumbers();
@@ -60,8 +65,12 @@ public class Controller {
             cell.setOnMousePressed(mouseEvent -> {
                 if (((Label) cell.getChildren().get(0)).equals("") || !((Label)cell.getChildren().get(0)).getText().equals(String.valueOf(chosenNumber))) {
                     ((Label)cell.getChildren().get(0)).setText(String.valueOf(chosenNumber));
+                    ((Label)cell.getChildren().get(0)).setBackground(Background.fill(Paint.valueOf(chosenColor)));
+                    ((Label)cell.getChildren().get(0)).setTextFill(Paint.valueOf("#FFF"));
                 }else{
                     ((Label)cell.getChildren().get(0)).setText("");
+                    ((Label)cell.getChildren().get(0)).setBackground(Background.fill(Paint.valueOf("#FFF")));
+                    ((Label)cell.getChildren().get(0)).setTextFill(Paint.valueOf("#000"));
                 }
             });
         }
@@ -123,5 +132,17 @@ public class Controller {
     public void selectNumber(ActionEvent event) {
         chosenNumber=Integer.parseInt(((Button)event.getSource()).getText());
         lblNumber.setText(((Button)event.getSource()).getText());
+        switch (((Button)event.getSource()).getText()){
+            case "1"-> chosenColor="pink";
+            case "2"-> chosenColor="cyan";
+            case "3"-> chosenColor="yellow";
+            case "4"-> chosenColor="red";
+            case "5" -> chosenColor="lime";
+            case "6" -> chosenColor="magenta";
+            case "7" -> chosenColor="brown";
+            case "8"-> chosenColor="gray";
+            case "9"-> chosenColor="black";
+        }
+        lblNumber.setStyle("-fx-border-color: #000;-fx-text-fill: #FFF;-fx-background-color: "+chosenColor);
     }
 }
