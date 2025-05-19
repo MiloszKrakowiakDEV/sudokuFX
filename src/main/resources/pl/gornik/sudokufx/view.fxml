@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.gornik.sudokufx.Controller">
    <children>
       <Pane prefHeight="107.0" prefWidth="754.0" style="-fx-background-color: #c0c0c0;">
@@ -20,8 +19,8 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button layoutX="264.0" layoutY="53.0" mnemonicParsing="false" text="RESTART" />
-            <ComboBox layoutX="376.0" layoutY="53.0" prefWidth="150.0" promptText="Difficulty" />
+            <Button layoutX="264.0" layoutY="53.0" mnemonicParsing="false" onAction="#restart" text="RESTART" />
+            <ComboBox fx:id="comboDifficulty" layoutX="376.0" layoutY="53.0" prefWidth="150.0" promptText="Poziom Trudności" />
          </children>
       </Pane>
       <Pane style="-fx-background-color: #c0c0c0;">
@@ -54,7 +53,7 @@
                   </GridPane>
                </children>
             </Pane>
-            <Label alignment="CENTER" layoutX="590.0" layoutY="14.0" prefHeight="107.0" prefWidth="150.0" text="Chosen number:" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" layoutX="590.0" layoutY="14.0" prefHeight="107.0" prefWidth="150.0" text="Wybrany numer:" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="29.0" />
                </font>

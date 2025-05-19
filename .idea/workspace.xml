@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bc85190-109d-443b-8039-654125cf0e59" name="Changes" comment="First commit">
+    <list default="true" id="8bc85190-109d-443b-8039-654125cf0e59" name="Changes" comment="Added color filling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/gornik/sudokufx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/gornik/sudokufx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pl/gornik/sudokufx/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pl/gornik/sudokufx/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +72,20 @@
       <option name="project" value="LOCAL" />
       <updated>1747390573818</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added color filling">
+      <option name="closed" value="true" />
+      <created>1747392129315</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747392129315</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Added color filling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added color filling" />
   </component>
 </project>
